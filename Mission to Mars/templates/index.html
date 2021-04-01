@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    <div class="news">
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h3>{{mars.article.title}}</h3>
+        <h4>{{mars.article.text}}</h4>
+      </div>
+    </div>
+      <div class="table_image">
+        <div class="thumbnails">
+          <div class="col-md-8">
+            <h2>Featured Mars Image</h2>
+            <h4>{{mars.mars_image.image_url}}</h4>
+            <img scr="{{mars.mars_image.image_url}}" alt="Mars">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h2>Mars Facts</h2>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Mars</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.ed}}</th>
+                  <td>{{mars.mars_facts.mars_table.ed}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.pd}}</th>
+                  <td>{{mars.mars_facts.mars_table.pd}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.mass}}</th>
+                  <td>{{mars.mars_facts.mars_table.mass}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.moon}}</th>
+                  <td>{{mars.mars_facts.mars_table.moon}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.od}}</th>
+                  <td>{{mars.mars_facts.mars_table.od}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.op}}</th>
+                  <td>{{mars.mars_facts.mars_table.op}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.st}}</th>
+                  <td>{{mars.mars_facts.mars_table.st}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.fr}}</th>
+                  <td>{{mars.mars_facts.mars_table.fr}}</td>
+                </tr>
+                <tr>
+                  <th scope="row">{{mars.mars_facts.label.rb}}</th>
+                  <td>{{mars.mars_facts.mars_table.rb}}</td>
+                </tr>
+               </tbody>
+            </table>
+
+        </div>
+      </div>
+
+      <div class="thumbnails">
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="{{mars.hemisphere_urls[0].img_url}}" alt="Valles Marineris">
+            <h3>{{mars.hemisphere_urls[0].title}}</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="{{mars.hemisphere_urls[1].img_url}}" alt="Cerberus">
+            <h3>{{mars.hemisphere_urls[1].title}}</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="{{mars.hemisphere_urls[2].img_url}}" alt="Schiaparelli">
+            <h3>{{mars.hemisphere_urls[2].title}}</h3>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="{{mars.hemisphere_urls[3].img_url}}" alt="Syrtis Major">
+            <h3>{{mars.hemisphere_urls[3].title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
